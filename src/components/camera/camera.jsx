@@ -23,7 +23,8 @@ class CameraComponent extends Component{
       viewCamera:!viewCamera
     }, () => {
       const { viewCamera } = this.state;
-      if(viewCamera){
+      const { hideCamera } = this.props;
+      if(viewCamera && !hideCamera){
         const CameraScreen = this.cameraRef.current;
         CameraScreen.setAttribute('playsinline', '');
         CameraScreen.setAttribute('autoplay', '');
@@ -43,10 +44,11 @@ class CameraComponent extends Component{
 
   render(){
     const { viewCamera } = this.state;
+    const { hideCamera } = this.props;
 
     return(
       <CameraContainer isOpen={viewCamera}>
-        {viewCamera ?
+        {viewCamera && !hideCamera ?
           <Fragment>
             <CameraScreen ref={this.cameraRef} />
             <CameraButton onClick={this.toggleCamera}>

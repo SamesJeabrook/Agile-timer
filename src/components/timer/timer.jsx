@@ -32,7 +32,8 @@ class Timer extends Component {
       timeOver: 0,
       totalTime: 0,
       displayTimeOver: false,
-      aggression: 1
+      aggression: 1,
+      standUpFinsihed: false
     };
 
     this.timeOverInterval;
@@ -191,7 +192,7 @@ class Timer extends Component {
               />
             : null}
           </TopContainerLeft>
-            <Camera />
+            <Camera hideCamera={standUpFinsihed} />
         </TopContainer>
         {aggression > 2 && time < 0 ?
           <AudioWarning /> : null

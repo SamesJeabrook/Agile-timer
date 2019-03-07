@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const CameraContainer = styled.div`
+  position: relative;
+  flex-grow: ${props => props.isOpen ? 2 : 0.5};
+`;
+
 export const CameraButton = styled.button`
 
   background: none;

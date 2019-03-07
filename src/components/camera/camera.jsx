@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
-import { CameraButton, CameraScreen } from './camera.styled';
+import { CameraButton, CameraScreen, CameraContainer } from './camera.styled';
 import { Camera } from 'styled-icons/boxicons-regular/Camera';
 import { CameraOff } from 'styled-icons/boxicons-regular/CameraOff';
 
@@ -45,7 +45,7 @@ class CameraComponent extends Component{
     const { viewCamera } = this.state;
 
     return(
-      <Fragment>
+      <CameraContainer isOpen={viewCamera}>
         {viewCamera ?
           <Fragment>
             <CameraScreen ref={this.cameraRef} />
@@ -58,7 +58,7 @@ class CameraComponent extends Component{
             <Camera />
           </CameraButton>
         }
-      </Fragment>
+      </CameraContainer>
     )
   }
 }

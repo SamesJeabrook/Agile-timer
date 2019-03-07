@@ -8,8 +8,7 @@ import {
   TimeSetterInput,
   TotalTimeCounter,
   TopContainer,
-  TopContainerLeft,
-  TopContainerRight
+  TopContainerLeft
 } from './timer.styled';
 
 import ModeSelector from '../modeSelector/modeSelector';
@@ -192,9 +191,7 @@ class Timer extends Component {
               />
             : null}
           </TopContainerLeft>
-          <TopContainerRight>
             <Camera />
-          </TopContainerRight>
         </TopContainer>
         {aggression > 2 && time < 0 ?
           <AudioWarning /> : null

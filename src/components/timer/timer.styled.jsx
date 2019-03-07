@@ -72,8 +72,3 @@ export const TopContainerLeft = styled.div`
   flex-grow: 3;
   height: 100%;
 `
-
-export const TopContainerRight = styled.div`
-  position: relative;
-  flex-grow: 2;
-`

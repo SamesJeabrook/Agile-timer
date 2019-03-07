@@ -13,6 +13,8 @@ import ModeSelector from '../modeSelector/modeSelector';
 import Warnings from '../warnings/warnings';
 import AudioWarning from '../audio/audio.jsx';
 
+import { CreditBlock, CreditBlockLink } from '../creditBlock/creditBlock.styled';
+
 import { convertSecondsToTime } from '../../utilities/utilities';
 
 class Timer extends Component {
@@ -208,6 +210,7 @@ class Timer extends Component {
           </TimeBlock>
         </TimeBlockContainer>
         <TotalTimeCounter>{`Total Time: ${presTotalTime.minutes} : ${presTotalTime.seconds}`}</TotalTimeCounter>
+        <CreditBlock>Created by <CreditBlockLink target="_BLANK" href="http://www.jamesseabrook.com/">James Seabrook</CreditBlockLink></CreditBlock>
       </Fragment>
     )
   }

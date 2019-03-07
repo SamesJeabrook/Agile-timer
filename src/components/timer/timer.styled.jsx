@@ -58,3 +58,17 @@ export const TotalTimeCounter = styled.div`
   bottom: 5px;
   right: 5px;
 `;
+
+export const TopContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: absolute;
+`;
+
+export const TopContainerLeft = styled.div`
+  position: relative;
+  flex-grow: 3;
+  height: 100%;
+`

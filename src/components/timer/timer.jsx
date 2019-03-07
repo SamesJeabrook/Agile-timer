@@ -7,11 +7,15 @@ import {
   TimeNegativeBox,
   TimeSetterInput,
   TotalTimeCounter,
+  TopContainer,
+  TopContainerLeft,
+  TopContainerRight
 } from './timer.styled';
 
 import ModeSelector from '../modeSelector/modeSelector';
 import Warnings from '../warnings/warnings';
-import AudioWarning from '../audio/audio.jsx';
+import AudioWarning from '../audio/audio';
+import Camera from '../camera/camera';
 
 import { CreditBlock, CreditBlockLink } from '../creditBlock/creditBlock.styled';
 
@@ -179,12 +183,19 @@ class Timer extends Component {
     return(
       <Fragment>
         <ModeSelector onChange={this.setAgression}/>
-        {aggression > 1 && time < 0 ? 
-          <Warnings
-            aggression={aggression}
-            timerPlacement={current.getBoundingClientRect()}
-          />
-          : null}
+        <TopContainer>
+          <TopContainerLeft>
+            {aggression > 1 && time < 0 ? 
+              <Warnings
+                aggression={aggression}
+                timerPlacement={current.getBoundingClientRect()}
+              />
+            : null}
+          </TopContainerLeft>
+          <TopContainerRight>
+            <Camera />
+          </TopContainerRight>
+        </TopContainer>
         {aggression > 2 && time < 0 ?
           <AudioWarning /> : null
         }

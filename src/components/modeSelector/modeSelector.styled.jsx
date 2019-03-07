@@ -4,6 +4,7 @@ export const ModeSelectorContainer = styled.div`
   position: fixed;
   top: 10px;
   left: 10px;
+  z-index: 1;
 `;
 
 export const ModeSelectorLabel = styled.label`

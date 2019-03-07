@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { GlobalStyle } from './components/global.styed';
 import Timer from './components/timer/timer';
 
+
 class App extends Component {
   constructor(){
     super();
